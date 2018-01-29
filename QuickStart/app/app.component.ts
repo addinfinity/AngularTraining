@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<h1>List of Courses :</h1>
+  template:`<cart></cart>`
+  // template: `<h1>List of Courses :</h1>
   
-  <ul>
-    <li *ngFor="let course of courses">    
-      <course [course]="course"></course>
-    </li>
-  </ul>`
+  // <ul>
+  //   <li *ngFor="let course of courses">    
+  //     <course [course]="course"></course>
+  //   </li>
+  // </ul>`
   // template: `
 
   //           <course [course]="course1name"></course>

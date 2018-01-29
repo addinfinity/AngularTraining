@@ -3,9 +3,10 @@ import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'course',
-    template: '<h1>{{courseName}}</h1>'
+    template: `<h1>{{course.name}}</h1>
+                <h2>Price: {{course.price}}</h2>`
 })
 export class CourseComponent {
     
-    @Input('name') courseName: string = 'Angular';
+    @Input('course') course: any = {};
 }

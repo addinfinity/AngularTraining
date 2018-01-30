@@ -8,8 +8,10 @@ import { Product } from './product';
 
 export class CartComponent {
 
-    heading:string = "Shopping cart:"
+    heading:string = "Shopping cart"
     isSuccess:boolean = true;
+
+    newProduct: Product = new Product();
 
     products = [new Product("product1", 100, 3.9, 2, "https://material.io/guidelines/static/spec/images/callouts/default.svg"),
     new Product("product2", 100, 2.2780, 5, "https://lh3.googleusercontent.com/ygfbsuk75s_UxGQTDgRxle9XuLrzVqlU3pgVtEjXLVMKijaKsr78jMi2i7Lm2_YZTPI=w300"),
@@ -23,5 +25,16 @@ export class CartComponent {
     headingOnChange(e:any){ 
         console.log(e.target.value);        
         this.heading = e.target.value;
+    }
+
+    SaveProduct(){
+        let productToBeInserted = new Product();
+        productToBeInserted.name = this.newProduct.name;
+        productToBeInserted.price = this.newProduct.price;
+        productToBeInserted.rating = this.newProduct.rating;
+        productToBeInserted.stockLasts = this.newProduct.stockLasts;
+
+        this.products.push(productToBeInserted);
+        this.newProduct = new Product();
     }
 }

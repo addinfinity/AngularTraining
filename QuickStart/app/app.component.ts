@@ -41,7 +41,9 @@ export class AppComponent  {
 
 // PIPES/FILTERS
 
-
+// FORMS
+// -> Provides validations
+// -> 
 
 
 ///////////////////////

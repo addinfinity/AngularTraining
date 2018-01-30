@@ -5,10 +5,10 @@ import { Product} from '../shoppingCart/product';
     templateUrl: './app/shoppingCart/product.component.html',
     styles:[`
         .productStyle{
-                border: 2px solid red;
+                border:1px solid black;
                 border-radius: 20px;
-                paddding: 20px;
-                margin: 20px;
+                paddding: 5px;
+                margin: 5px;
         }
         div{
             margin: 5px;

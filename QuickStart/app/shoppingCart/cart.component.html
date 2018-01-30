@@ -1,5 +1,6 @@
-<h1>{{heading}}</h1>
-<!--
+<div class="container">
+  <h1>{{heading}}</h1>
+  <!--
 <input type="text" [(ngModel)]="heading" />
  <input type="text" [value]="heading" (input)="headingOnChange($event)" /> 
 
@@ -16,13 +17,24 @@
 <input  type="button" 
         value="Change Heading!" 
         [ngClass]="{'btn': true, 'btn-success': false, 'btn-primary':true}" /> -->
-<!-- 
+  <!-- 
 <ul>
   <li *ngFor="let product of products">
     <product [product]="product"></product>
   </li>
 </ul> -->
 
-    <div *ngFor="let product of products">
-        <product [product]="product"></product>
-    </div>
+  <form (ngSubmit)="SaveProduct()">
+    Name:
+    <input name="name" type="text" class="form-control" [(ngModel)]="newProduct.name" /> Price:
+    <input name="price" type="text" class="form-control" [(ngModel)]="newProduct.price" /> Rating:
+    <input name="rating" type="text" class="form-control" [(ngModel)]="newProduct.rating" /> Stocks lasts:
+    <input name="stockLasts" type="text" class="form-control" [(ngModel)]="newProduct.stockLasts" />
+    <br/>
+    <input type="submit" value="Save" class="btn btn-primary" />
+  </form>
+
+  <div *ngFor="let product of products">
+    <product [product]="product"></product>
+  </div>
+</div>

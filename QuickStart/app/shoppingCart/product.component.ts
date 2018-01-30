@@ -1,8 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, style } from '@angular/core';
 import { Product} from '../shoppingCart/product';
 @Component({
     selector: 'product',
-    templateUrl: './app/shoppingCart/product.component.html'
+    templateUrl: './app/shoppingCart/product.component.html',
+    styles:[`
+        .productStyle{
+                border: 2px solid red;
+                border-radius: 20px;
+                paddding: 10px;
+                margin: 20px;
+        }
+    `]
 })
 
 export class ProductComponent{

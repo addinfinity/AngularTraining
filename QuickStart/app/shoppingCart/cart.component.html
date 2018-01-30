@@ -1,5 +1,28 @@
+<h1>{{heading}}</h1>
+
+<input type="text" [(ngModel)]="heading" />
+<!-- <input type="text" [value]="heading" (input)="headingOnChange($event)" /> 
+
+<input type="checkbox" [(ngModel)]="isSuccess" />
+<input  type="button" value="Change Heading!" (click)="changeHeading()" class="btn"
+        [class.btn-success] = "isSuccess" /> 
+
+<input type="button" value="Change Heading!" [ngClass]="'btn btn-success'" />
+
+<input  type="button" 
+        value="Change Heading!" 
+        [ngClass] = "['btn', 'btn-success']" /> -->
+
+<input  type="button" 
+        value="Change Heading!" 
+        [ngClass]="{'btn': true, 'btn-success': false, 'btn-primary':true}" />
+<!-- 
 <ul>
-    <li *ngFor="let product of products">
+  <li *ngFor="let product of products">
+    <product [product]="product"></product>
+  </li>
+</ul> -->
+
+    <div *ngFor="let product of products">
         <product [product]="product"></product>
-    </li>
-</ul>
+    </div>

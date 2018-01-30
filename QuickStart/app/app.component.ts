@@ -29,7 +29,12 @@ export class AppComponent  {
 // Zone.js is required for Angular to detect change detection and model binding
 // Binding
 // Oneway -> interpolation -  {{}}  OR property binding - [property name]
+// Two-way -> 
 
 //Directives 
 //Structural Directives -> preceded by *
 //e.g. ngfor
+
+// All component class names should start with Capital letters
+
+// CSS scoping -> limiting styles to components

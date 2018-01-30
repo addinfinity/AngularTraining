@@ -17,14 +17,14 @@ export class UseProductServComponent{
     }
 
     getProduct():void{
-        this.productName = this.servObj.getRandomProduct();
+        this.productName = this.servObj.getRandomProduct().name;
         console.log(this.productName);
     }
 
     addProduct():void{
-        this.servObj.insert(this.productToAdd);
-        console.log(            
-        this.servObj.getProducts()
-        );
+        // this.servObj.insert(this.productToAdd);
+        // console.log(            
+        // this.servObj.getProducts()
+        // );
     }
 }

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
   template:`<cart></cart>`
+  // template: `<useProdServ></useProdServ>`
   // template: `<h1>List of Courses :</h1>
   
   // <ul>
@@ -49,6 +50,13 @@ export class AppComponent  {
 // Valid - 
 // Invalid - 
 // Dirty - Changed
+
+
+// Services
+// services are injected in other classes like components through constructor
+//
+//
+//
 
 
 ///////////////////////

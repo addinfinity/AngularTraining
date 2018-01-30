@@ -1,0 +1,13 @@
+<div class="container" style="border: 2px black solid; border-radius:10px; padding:10px">
+  <h2>Use product service component</h2>
+  <div class="row">
+    <div class="col-sm">
+      <input type="button" class="btn btn-sm btn-primary" (click)="getProduct()" value="Get Product" />
+      <h3> {{productName}}</h3>
+    </div>
+    <div class="col-sm">
+      <input type="text" [(ngModel)]="productToAdd">
+      <input type="button" (click)="addProduct()" value="Add" class="btn btn-sm btn-primary" />
+    </div>
+  </div>
+</div>

@@ -7,8 +7,11 @@ import { Product} from '../shoppingCart/product';
         .productStyle{
                 border: 2px solid red;
                 border-radius: 20px;
-                paddding: 10px;
+                paddding: 20px;
                 margin: 20px;
+        }
+        div{
+            margin: 5px;
         }
     `]
 })

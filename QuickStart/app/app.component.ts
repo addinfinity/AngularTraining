@@ -38,3 +38,12 @@ export class AppComponent  {
 // All component class names should start with Capital letters
 
 // CSS scoping -> limiting styles to components
+
+// PIPES/FILTERS
+
+
+
+
+///////////////////////
+/// https://github.com/sumeetwajpe
+///////////////////////

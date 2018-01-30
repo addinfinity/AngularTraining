@@ -1,13 +1,21 @@
 <div class="productStyle">
-    <div>
-    <span >Name : {{product.name}}</span>
-    </div>
-    <div>
-    <span>Price : {{product.price}}</span>
-    </div>
-    <div>
-    <span>Rating:  {{product.rating}}</span>
-    </div>
-    
-    <img src="{{product.imageUrl}}" height="50px" width="50px"/>
+  <div>
+    <span>Name : {{product.name | uppercase}}</span>
+  </div>
+  <div>
+    <span>Price : {{product.price | currency:'INR':true}}</span>
+  </div>
+  <div>
+    <span>Rating: {{product.rating | number:'1.1-2' }}</span>
+  </div>
+  <div>
+    <span>Stock Lasts: {{product.stockLasts | stocks:' month(s)' }}</span>
+  </div>
+  <div>
+    <img src="{{product.imageUrl}}" height="50px" width="50px" />
+  </div>
+  <div>
+    <span>RAW data:</span>
+    {{product | json}}
+  </div>
 </div>

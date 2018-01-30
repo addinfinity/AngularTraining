@@ -24,17 +24,84 @@
   </li>
 </ul> -->
 
-  <form (ngSubmit)="SaveProduct()">
-    Name:
-    <input name="name" type="text" class="form-control" [(ngModel)]="newProduct.name" /> Price:
-    <input name="price" type="text" class="form-control" [(ngModel)]="newProduct.price" /> Rating:
-    <input name="rating" type="text" class="form-control" [(ngModel)]="newProduct.rating" /> Stocks lasts:
-    <input name="stockLasts" type="text" class="form-control" [(ngModel)]="newProduct.stockLasts" />
+  <form #f="ngForm" (ngSubmit)="SaveProduct(f.form)">
+    <div class="row">
+      <div class="col-sm">
+        Name:
+        <input name="name" type="text" required class="form-control" [(ngModel)]="newProduct.name" />
+      </div>
+      <div class="col-sm">
+        Price:
+        <input name="price" type="text" class="form-control" [(ngModel)]="newProduct.price" />
+      </div>
+      <div class="col-sm"> Rating:
+        <input name="rating" type="text" class="form-control" [(ngModel)]="newProduct.rating" />
+      </div>
+
+      <div class="col-sm">Stocks lasts:
+        <input name="stockLasts" type="text" class="form-control" [(ngModel)]="newProduct.stockLasts" />
+      </div>
+      <div class="col-sm">
+        Launch Date:
+        <input name="launchDate" type="text" class="form-control" pattern="\d\d-\d\d-\d\d\d\d" [(ngModel)]="newProduct.launchDate"
+        />
+      </div>
+    </div>
     <br/>
-    <input type="submit" value="Save" class="btn btn-primary" />
+    <div class="row">
+      <div class="col-sm offset-sm-5">
+        <input type="submit" [disabled]="!f.valid" value="Save" class="btn btn-primary" />
+        <input type="reset" class="btn" />
+      </div>
+    </div>
   </form>
 
-  <div *ngFor="let product of products">
-    <product [product]="product"></product>
+  <!-- Search your company :
+  <input type="text" [(ngModel)]="companyToSearch" />
+
+  <div [ngSwitch]="companyToSearch">
+    <p *ngSwitchCase="'Accenture'">Accenture</p>
+    <p *ngSwitchCase="'Synechron'">Synechron</p>
+    <p *ngSwitchCase="'Company1'">Company1</p>
+    <p *ngSwitchCase="'Company2'">Company2</p>
+    <p *ngSwitchDefault>No Match !!</p>
+  </div> -->
+
+  Search your product :
+  <input type="text" [(ngModel)]="productToSearch" />
+
+  <div [ngSwitch]="productToSearch | uppercase">
+    <div *ngFor="let prod of products">
+      <p *ngSwitchCase="prod.name | uppercase">
+        <product [product]="prod"></product>
+      </p>
+    </div>
+    <!-- <div *ngIf="productToSearch">
+      <div *ngSwitchDefault>
+        <h4> No matching products found !</h4>
+      </div>
+    </div> -->
+    <div *ngSwitchDefault>
+      <div *ngIf="productToSearch">
+        <div>
+          <h4> No matching products found !</h4>
+        </div>
+      </div>
+      <div *ngIf="!productToSearch">
+        <div *ngFor="let product of products">
+          <product [product]="product"></product>
+        </div>
+      </div>
+    </div>
   </div>
+
+
+  <!--<div *ngIf="products.length == 0">
+    <h4> No products yet !</h4>
+  </div>
+   <div *ngIf="products.length > 0">
+    <div *ngFor="let product of products">
+      <product [product]="product"></product>
+    </div>
+  </div> -->
 </div>

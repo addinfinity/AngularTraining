@@ -1,7 +1,7 @@
 <div class="productStyle">
   <div>
     <img src="{{product.imageUrl}}" height="50px" width="50px" />
-    <h3>{{product.name | uppercase}}</h3>    
+    <h3>{{product.name | uppercase}}</h3>
   </div>
   <div>
     <span>Price : {{product.price | currency:'INR':true}}</span>
@@ -13,10 +13,12 @@
     <span>Stock Lasts: {{product.stockLasts | stocks:' month(s)' }}</span>
   </div>
   <div>
-    
+    <span>Launch Date: {{product.launchDate }}</span>
   </div>
-  <div>
-    <span>RAW data:</span>
-    {{product | json}}
+
+
+    <div>
+      <span>RAW data:</span>
+      {{product | json}}
+    </div>
   </div>
-</div>

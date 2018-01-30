@@ -43,7 +43,12 @@ export class AppComponent  {
 
 // FORMS
 // -> Provides validations
-// -> 
+
+// Forms validation 
+// Pristine - Unchanged
+// Valid - 
+// Invalid - 
+// Dirty - Changed
 
 
 ///////////////////////

@@ -1,3 +1,13 @@
+//////////////////////
+
+Javascript testing frameworks/test suits : Jasmine/Mocha/Chai/Qunit
+Test runners : karma -> run and debug test cases
+
+
+//////////////////////
+
+
+
 # Ang5App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.

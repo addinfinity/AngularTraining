@@ -10,10 +10,19 @@ import { UseProductServComponent } from './shoppingCart/userProductServComp';
 import { ProductService } from './shoppingCart/product.service';
 import { HttpModule } from '@angular/http';
 import { PostsComponent } from './shoppingCart/post.component';
-//import { PostService } from './shoppingCart/post.service';
+import { Routes,RouterModule } from "@angular/router";
+
+const appRoutes: Routes=[
+
+  { path: 'posts', component: PostsComponent },
+  { path: 'cart', component: CartComponent },
+  { path: '', redirectTo: '/cart', pathMatch: 'full' },
+  { path: '**', redirectTo:'/posts', pathMatch:'full' }
+];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpModule ],
+  imports: [BrowserModule, FormsModule, HttpModule, 
+    RouterModule.forRoot(appRoutes) ],
   declarations: [ AppComponent, 
                   CourseComponent, 
                   ProductComponent, 

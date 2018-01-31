@@ -4,8 +4,15 @@ import { PostService } from './post.service';
 @Component({
     selector: 'posts',
     //templateUrl: 'posts.component.html'
-    template:`<h1> Posts </h1>
-    {{posts | json}}`,
+    template:`
+    <h1> Posts </h1>
+    <ul>
+        <li *ngFor="let post of posts">
+            {{post.title}}
+        </li>
+    </ul>
+    
+    `,
     providers:[PostService]
 })
 

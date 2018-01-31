@@ -2,7 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: `<posts></posts>`
+  template:`
+<div class="container">
+  <a routerLink="/posts" class="btn btn-primary">Posts</a>
+  <a routerLink="/cart" class="btn btn-primary">Cart</a>
+
+  <router-outlet></router-outlet>  
+</div>
+  `
+  // template: `<posts></posts>`
   // template:`<cart></cart>`
   // template: `<useProdServ></useProdServ>`
   // template: `<h1>List of Courses :</h1>
@@ -59,6 +67,11 @@ export class AppComponent  {
 // This will enable injecting other services into your service
 //
 
+
+// Routing
+//
+//
+//
 
 ///////////////////////
 /// https://github.com/sumeetwajpe

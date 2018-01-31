@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template:`<cart></cart>`
+  template: `<posts></posts>`
+  // template:`<cart></cart>`
   // template: `<useProdServ></useProdServ>`
   // template: `<h1>List of Courses :</h1>
   
@@ -54,11 +55,12 @@ export class AppComponent  {
 
 // Services
 // services are injected in other classes like components through constructor
-//
-//
+// @Injectable() attribute is required if your service is using some other service. 
+// This will enable injecting other services into your service
 //
 
 
 ///////////////////////
 /// https://github.com/sumeetwajpe
+/// https://blog.angularindepth.com/insiders-guide-into-interceptors-and-httpclient-mechanics-in-angular-103fbdb397bf
 ///////////////////////

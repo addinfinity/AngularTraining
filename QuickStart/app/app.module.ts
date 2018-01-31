@@ -11,10 +11,12 @@ import { ProductService } from './shoppingCart/product.service';
 import { HttpModule } from '@angular/http';
 import { PostsComponent } from './shoppingCart/post.component';
 import { Routes,RouterModule } from "@angular/router";
+import { PostDetailsComponent } from './shoppingCart/postdetail.component';
 
 const appRoutes: Routes=[
 
   { path: 'posts', component: PostsComponent },
+  { path: 'view/:id', component: PostDetailsComponent },
   { path: 'cart', component: CartComponent },
   { path: '', redirectTo: '/cart', pathMatch: 'full' },
   { path: '**', redirectTo:'/posts', pathMatch:'full' }
@@ -29,7 +31,8 @@ const appRoutes: Routes=[
                   CartComponent, 
                   StockPipe, 
                   UseProductServComponent,
-                  PostsComponent ],  
+                  PostsComponent,
+                  PostDetailsComponent ],  
   bootstrap:    [ AppComponent ],
   providers:    [ ProductService ]
 })

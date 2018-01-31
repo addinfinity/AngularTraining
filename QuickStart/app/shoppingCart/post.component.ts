@@ -8,7 +8,7 @@ import { PostService } from './post.service';
     <h1> Posts </h1>
     <ul>
         <li *ngFor="let post of posts">
-            {{post.title}}
+            <a [routerLink] ="['/view',post.id]">{{post.title}}</a>
         </li>
     </ul>
     
@@ -20,8 +20,8 @@ export class PostsComponent {
 
     posts:any;
 
-    // Use Arrow function in case of call back functions istead for anonymous functions.
-    // Anonymous functions lose the cotext of the component object.
+    // Use Arrow function in case of call back functions instead for anonymous functions.
+    // Anonymous functions loses the context of the component object.
     constructor(private postService:PostService) { 
         // this.postService.getPostsUsingCallbackFunction(
         //     (data:any) => 
